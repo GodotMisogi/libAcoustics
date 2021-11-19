@@ -1,0 +1,10 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # run from this directory
+
+foamListTimes -rm
+rm -r 0
+cp -r 0.orig/ 0/
+rm -rf acousticData
+rm log.*
+
+# ----------------------------------------------------------------- end-of-file

@@ -1,0 +1,27 @@
+probes
+{
+    type            sets;
+
+    // Where to load it from
+    libs            ( "libsampling.so" );
+
+    // Name of the directory for probe data
+    name            probes;
+
+    // Write at same frequency as fields
+    writeControl    timeStep;
+//    writeInterval  1;
+
+    // Fields to be probed
+    fields          
+    (
+                        p
+                        // U
+    );
+
+    points
+    (
+                    (1.01 0.0  0.0)
+                    (1.01 0.0 -1.0)
+    );
+}

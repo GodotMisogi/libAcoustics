@@ -1,0 +1,26 @@
+wtfTest
+{
+    type                        FfowcsWilliamsHawkings;
+    #include                    "commonSettings";
+    patches                     ("airfoil");
+    interpolationScheme         cell;
+    formulationType             Farassat1AFormulation;
+    U0                          (.0 .0 .0);
+    cleanFreq                   100;
+
+    surfaces
+    (
+            airfoil
+            {
+                type            patch;
+                patches         ("airfoil");
+                interpolate     false;
+            }
+    );
+
+    nonUniformSurfaceMotion     false;
+    Ufwh                        (.0 .0 .0);
+
+}
+
+

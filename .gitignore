@@ -2,5 +2,7 @@ build/
 platforms/
 Sources/lib/Make/linux64*
 Sources/lib/lnInclude
+0*/
 
+!0.orig/
 
