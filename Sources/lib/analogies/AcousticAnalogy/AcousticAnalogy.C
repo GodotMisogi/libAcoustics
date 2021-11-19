@@ -133,7 +133,7 @@ void Foam::functionObjects::AcousticAnalogy::writeFft()
     {
         const fvMesh& mesh = refCast<const fvMesh>(obr_);
 
-        scalar	tau;
+        scalar    tau;
         if (mesh.time().startTime().value() > timeStart_)
         {
             tau = (mesh.time().value() - mesh.time().startTime().value());

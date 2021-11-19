@@ -12,8 +12,19 @@ Description
 
 \*---------------------------------------------------------------------------*/
 
-#includeEtc "caseDicts/postProcessing/numerical/solverInfo.cfg"
+solverInfo
+{
+    type                    solverInfo;
+    libs                    ("libutilityFunctionObjects.so");
 
-fields (p U e k omega);
+    fields                  (rho p U T phi nut k omega alphat);
+    writeResidualFields     yes;
+
+    executeControl          timeStep;
+    executeInterval         1;
+    writeControl            outputTime;
+}
+
+
 
 // ************************************************************************* //

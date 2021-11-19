@@ -43,7 +43,7 @@ divSchemes
     div(phi,K)                                      Gauss $defaultAdvScheme;
 
     //continuity equation
-    div(phid,p)	Gauss $defaultAdvScheme;
+    div(phid,p)    Gauss $defaultAdvScheme;
 
     div(((rho*nuEff)*dev2(T(grad(U)))))             Gauss linear;
 

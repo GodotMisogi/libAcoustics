@@ -124,7 +124,7 @@ Foam::soundPressureSampler::soundPressureSampler
     functionObject(name),
     mesh_
     (
-	refCast<const fvMesh>
+    refCast<const fvMesh>
         (
             t.lookupObject<objectRegistry>
             (
@@ -289,14 +289,14 @@ void Foam::soundPressureSampler::makeFile()
     if (Pstream::master() && Pstream::parRun())
     {
         //soundPressureSamplerDir = obr_.time().rootPath() + "/" + obr_.time().caseName().path() + "/pressureData" ;
-	soundPressureSamplerDir = mesh_.time().rootPath() + "/" + mesh_.time().caseName().path() + "/pressureData" ;
+    soundPressureSamplerDir = mesh_.time().rootPath() + "/" + mesh_.time().caseName().path() + "/pressureData" ;
 
         mkDir(soundPressureSamplerDir);
     }
     else if (!Pstream::parRun())
     {
         //soundPressureSamplerDir = obr_.time().rootPath() + "/" + obr_.time().caseName() + "/pressureData" ;
-	soundPressureSamplerDir = mesh_.time().rootPath() + "/" + mesh_.time().caseName() + "/pressureData" ;
+    soundPressureSamplerDir = mesh_.time().rootPath() + "/" + mesh_.time().caseName() + "/pressureData" ;
 
         mkDir(soundPressureSamplerDir);
     }

@@ -95,17 +95,17 @@ private:
 
     public:
 
-	pointField points;
-	faceList faces;
-	labelList pointsMap;
+    pointField points;
+    faceList faces;
+    labelList pointsMap;
 
-	//- Clear all storage
-	void clear()
-	{
-	    points.clear();
-	    faces.clear();
-    	    pointsMap.clear();
-	}
+    //- Clear all storage
+    void clear()
+    {
+        points.clear();
+        faces.clear();
+            pointsMap.clear();
+    }
     };
     
     //- Output verbosity
@@ -118,12 +118,12 @@ protected:
 
     // Private data
     
-	//- Const reference to fvMesh
-	const fvMesh& mesh_;
-	        
-	//- Load fields from files (not from objectRegistry)
-	const bool loadFromFiles_;
-	                        
+    //- Const reference to fvMesh
+    const fvMesh& mesh_;
+            
+    //- Load fields from files (not from objectRegistry)
+    const bool loadFromFiles_;
+                            
         
         //- Name of this set of soundPressureSampler,
         // Also used as the name of the probes directory.
@@ -210,20 +210,20 @@ public:
         //- Construct from Time and dictionary
         soundPressureSampler
         (
-	    const word& name,
+        const word& name,
             const Time& time,
             const dictionary& dict
         );
         
-	//- Construct for given objectRegistry and dictionary
-	//  allow the possibility to load fields from files
+    //- Construct for given objectRegistry and dictionary
+    //  allow the possibility to load fields from files
         soundPressureSampler
-	(
-    	    const word& name,
-    	    const objectRegistry&,
-    	    const dictionary&,
-    	    const bool loadFromFiles = false
-	);
+    (
+            const word& name,
+            const objectRegistry&,
+            const dictionary&,
+            const bool loadFromFiles = false
+    );
 
     //- Destructor
     virtual ~soundPressureSampler();

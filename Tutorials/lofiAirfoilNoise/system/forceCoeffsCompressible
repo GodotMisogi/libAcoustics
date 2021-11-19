@@ -1,0 +1,39 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+-------------------------------------------------------------------------------
+Description
+    Calculates lift, drag and moment coefficients by summing forces on
+    specified patches for a case where the solver is compressible (pressure is
+    in units M/(LT^2), e.g. Pa).
+\*---------------------------------------------------------------------------*/
+
+forceCoeffsCompressible
+{
+    type        forceCoeffs;
+    libs        ("libforces.so");
+    patches     ("airfoil");
+
+    magUInf     20;
+    rhoInf      1.225;
+    lRef        1;
+    Aref        1;
+
+    // Field names
+    p               p;
+    U               U;
+    rho             rho;
+
+    // Store and write volume field representations of forces and moments
+    writeFields    no;
+
+    liftDir     (0 0 1);
+    dragDir     (1 0 0);
+
+    CofR        (0.25 0 0);
+    pitchAxis   (0 0 1);
+}
+// ************************************************************************* //

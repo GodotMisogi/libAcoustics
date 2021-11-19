@@ -103,10 +103,10 @@ def plotPerRadius (time, R1, R2, h):
 
     i = 0
     for num in resR[0]:
-	cur = abs(num)
-	outputFile.write('%s' % coord[i] + ' ' + '%s' % cur)
-	outputFile.write('\n')
-	i = i + 1
+    cur = abs(num)
+    outputFile.write('%s' % coord[i] + ' ' + '%s' % cur)
+    outputFile.write('\n')
+    i = i + 1
 
     outputFile.close()
 
@@ -119,10 +119,10 @@ def plotPerTime (point, t0, T, tau, outFile):
     fOutput = open(outFile,"w")
 
     for t in np.arange(t0, T + t0 + tau, tau):
-	
-	cur1 = np.real(resTime[0][0] * np.exp (- 1j * 2 * np.pi * freq * (t)))
-	fOutput.write('%s' % t + ' ' + '%s' % cur1)
-	fOutput.write('\n')
+    
+    cur1 = np.real(resTime[0][0] * np.exp (- 1j * 2 * np.pi * freq * (t)))
+    fOutput.write('%s' % t + ' ' + '%s' % cur1)
+    fOutput.write('\n')
     
     fOutput.close()
 
@@ -141,10 +141,10 @@ def polarplot(R):
 
     i = 0
     for num in polarRes[0]:
-	cur = abs(num)
-	polarFile.write('%s' % theta[i] + ' ' + '%s' % cur)
-	polarFile.write('\n')
-	i = i + 1
+    cur = abs(num)
+    polarFile.write('%s' % theta[i] + ' ' + '%s' % cur)
+    polarFile.write('\n')
+    i = i + 1
 
     polarFile.close()
     print ("polar OK")

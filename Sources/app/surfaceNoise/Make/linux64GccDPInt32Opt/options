@@ -1,0 +1,66 @@
+# 0 "Make/options"
+# 0 "<built-in>"
+# 0 "<command-line>"
+
+
+
+
+
+
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+
+# 17 "/usr/include/stdc-predef.h" 3 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 6 "<command-line>" 2
+# 1 "Make/options"
+fftw_root=$(FFTW_ARCH_PATH)
+
+EXE_INC = -I$(LIB_SRC)/randomProcesses/lnInclude -I$(LIB_SRC)/sampling/lnInclude -I../../lib/lnInclude -I$(fftw_root)/include
+
+
+
+
+
+EXE_LIBS = -lrandomProcesses -lsampling -L$(FOAM_LIBBIN) -lAcoustics -L$(fftw_root)/lib64 -lfftw3
